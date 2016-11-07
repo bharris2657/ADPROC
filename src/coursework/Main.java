@@ -21,6 +21,11 @@ public class Main {
         TypeTwoThree box3 = new TypeTwoThree(new double[]{5.0, 5.0, 5.0}, 4, true, true, new String[]{"Red", "Blue"});
         TypeFourFive box4 = new TypeFourFive(new double[]{6.0, 6.0, 6.0}, 5, true, false, new String[]{"Red", "Blue"});
         TypeFourFive box5 = new TypeFourFive(new double[]{7.0, 7.0, 7.0}, 6, true, true, new String[]{"Red", "Blue"});
+        
+        System.out.println("The grade of card in box 1 is: " + box1.getGrade());
+        System.out.println("The number of prints in box 2 is: " + box2.getPrint());
+        System.out.println("The number of prints in box 3 is: " + box3.getPrint());
+        System.out.println(box4.getBottom() + "" + box4.getCorner());
+        System.out.println(box5.getBottom() + "" + box5.getCorner());
     }
-
 }
