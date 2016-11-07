@@ -18,11 +18,11 @@ public class TypeTwoThree extends Box {
     public TypeTwoThree() {
     }
 
-    public TypeTwoThree(double cardSize, int cardGrade, boolean lidSeal, boolean cardType, String[] printColour) {
-        size = cardSize;
-        grade = cardGrade;
-        sealedTop = lidSeal;
-        type = cardType;
+    public TypeTwoThree(double[] newSize, int newGrade, boolean newSeal, boolean newType, String[] printColour) {
+        size = newSize;
+        grade = newGrade;
+        sealedTop = newSeal;
+        type = newType;
         if (!type) {
             print = 1;
         } else {
@@ -38,12 +38,20 @@ public class TypeTwoThree extends Box {
     public boolean getType() {
         return type;
     }
+    
+    public void setPrint(int newPrint){
+        print = newPrint;
+    }
 
     public int getPrint() {
         return print;
     }
+    
+    public void newColourList(String[] newColour){
+        colourList = newColour;
+    }
 
-    public void setColour(int index, String newColour) {
+    public void setSingleColour(int index, String newColour) {
         colourList[index] = newColour;
     }
 

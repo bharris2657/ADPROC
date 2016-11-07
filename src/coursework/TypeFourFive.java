@@ -17,11 +17,11 @@ public class TypeFourFive extends TypeTwoThree {
     public TypeFourFive() {
     }
 
-    public TypeFourFive(double cardSize, int cardGrade, boolean lidSeal, boolean cardType, String[] printColour) {
-        size = cardSize;
-        grade = cardGrade;
-        sealedTop = lidSeal;
-        type = cardType;
+    public TypeFourFive(double[] newSize, int newGrade, boolean newSeal, boolean newType, String[] printColour) {
+        size = newSize;
+        grade = newGrade;
+        sealedTop = newSeal;
+        type = newType;
         print = 2;
         colourList = printColour;
         if (!type) {
@@ -31,5 +31,21 @@ public class TypeFourFive extends TypeTwoThree {
             reinforcedBottom = true;
             reinforcedCorner = true;
         }
+    }
+
+    public void setBottom(boolean newBottom) {
+        reinforcedBottom = newBottom;
+    }
+
+    public boolean getBottom() {
+        return reinforcedBottom;
+    }
+
+    public void setCorner(boolean newCorner) {
+        reinforcedCorner = newCorner;
+    }
+
+    public boolean getCorner() {
+        return reinforcedCorner;
     }
 }

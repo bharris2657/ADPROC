@@ -11,23 +11,25 @@ package coursework;
  */
 public class Box {
 
-    protected double size;
+    protected double[] size;
     protected int grade;
     protected boolean sealedTop;
     
     public Box(){}
     
-    public Box(double newSize, int newGrade, boolean newSeal){
+    public Box(double[] newSize, int newGrade, boolean newSeal){
         size = newSize;
         grade = newGrade;
         sealedTop = newSeal;
     }
 
-    public void setSize(double newSize) {
-        size = newSize;
+    public void setSize(double newSizeX, double newSizeY, double newSizeZ) {
+        size[0] = newSizeX;
+        size[1] = newSizeY;
+        size[2] = newSizeZ;
     }
 
-    public double getSize() {
+    public double[] getSize() {
         return size;
     }
 
