@@ -9,45 +9,39 @@ package adproc2016;
  *
  * @author Ben
  */
-public class TypeTwoThree extends TypeOne {
+public class TypeOne extends Box {
 
-    protected boolean type;
-    protected int print;
-    protected String[] colourList;
-
-    public TypeTwoThree(double[] newSize, int newGrade, boolean newSealedTop, int newPrint, String[] newColourList) {
-        super(newSize, newGrade, newSealedTop);
+    public TypeOne(double[] newSize, int newGrade, boolean newSealedTop) {
         size = newSize;
         grade = newGrade;
         sealedTop = newSealedTop;
-        print = newPrint;
-        colourList = newColourList;
     }
 
-    public void setPrint(int newPrint) {
-        print = newPrint;
+    //size top grade
+    public void setSize(double newSizeX, double newSizeY, double newSizeZ) {
+        size[0] = newSizeX;
+        size[1] = newSizeY;
+        size[2] = newSizeZ;
     }
 
-    public int getPrint() {
-        return print;
+    public double[] getSize() {
+        return size;
     }
 
-    public void newColourList(String[] newColour) {
-        colourList = newColour;
+    public void setTop(boolean newTop) {
+        sealedTop = newTop;
     }
 
-    public void setSingleColour(int index, String newColour) {
-        colourList[index] = newColour;
+    public boolean getTop() {
+        return sealedTop;
     }
 
-    public String[] getColour() {
-        return colourList;
+    public void setGrade(int newGrade) {
+        grade = newGrade;
     }
 
-    public void printColour() {
-        for (int i = 0; i < colourList.length; i++) {
-            System.out.println(colourList[i]);
-        }
+    public int getGrade() {
+        return grade;
     }
 
     public double getPrice() {
@@ -69,14 +63,6 @@ public class TypeTwoThree extends TypeOne {
                 break;
             case 5:
                 basicPrice = 1.4;
-                break;
-        }
-        switch (print) {
-            case 1:
-                extraCost += 0.13;
-                break;
-            case 2:
-                extraCost += 0.16;
                 break;
         }
         if (sealedTop) {

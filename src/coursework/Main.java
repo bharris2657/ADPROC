@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package coursework;
+package adproc2016;
 
 /**
  *
- * @author benha
+ * @author Ben
  */
 public class Main {
 
@@ -16,16 +16,11 @@ public class Main {
      */
     public static void main(String[] args) {
         //testing box objects
-        Box box1 = new Box(new double[]{2.0, 2.0, 2.0}, 1, true);
-        TypeTwoThree box2 = new TypeTwoThree(new double[]{4.0, 4.0, 4.0}, 3, true, false, new String[]{"Red"});
-        TypeTwoThree box3 = new TypeTwoThree(new double[]{5.0, 5.0, 5.0}, 4, true, true, new String[]{"Red", "Blue"});
-        TypeFourFive box4 = new TypeFourFive(new double[]{6.0, 6.0, 6.0}, 5, true, false, new String[]{"Red", "Blue"});
-        TypeFourFive box5 = new TypeFourFive(new double[]{7.0, 7.0, 7.0}, 6, true, true, new String[]{"Red", "Blue"});
-        
-        System.out.println("The grade of card in box 1 is: " + box1.getGrade());
-        System.out.println("The number of prints in box 2 is: " + box2.getPrint());
-        System.out.println("The number of prints in box 3 is: " + box3.getPrint());
-        System.out.println(box4.getBottom() + "" + box4.getCorner());
-        System.out.println(box5.getBottom() + "" + box5.getCorner());
+        TypeOne box1 = new TypeOne(new double[]{0.7, 0.3, 0.4}, 1, false);
+        System.out.println(box1.getPrice());
+        TypeTwoThree box2 = new TypeTwoThree(new double[] {0.7, 0.3, 0.4}, 3, true, 2, new String[]{"red", "blue"});
+        System.out.println(box2.getPrice());
+        TypeFourFive box3 = new TypeFourFive(new double[] {0.7, 0.3, 0.4}, 5, false, 2, new String[]{"red", "blue"}, true, true);
+        System.out.println(box3.getPrice());
     }
 }

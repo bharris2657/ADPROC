@@ -3,49 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package coursework;
+package adproc2016;
 
-/**
- *
- * @author benha
- */
-public class Box {
+public abstract class Box {
 
     protected double[] size;
     protected int grade;
     protected boolean sealedTop;
-    
-    public Box(){}
-    
-    public Box(double[] newSize, int newGrade, boolean newSeal){
+
+    public Box() {
+    }
+
+    public Box(double[] newSize, int newGrade, boolean newSeal) {
         size = newSize;
         grade = newGrade;
         sealedTop = newSeal;
     }
 
-    public void setSize(double newSizeX, double newSizeY, double newSizeZ) {
-        size[0] = newSizeX;
-        size[1] = newSizeY;
-        size[2] = newSizeZ;
-    }
+    public abstract void setSize(double newSizeX, double newSizeY, double newSizeZ);
 
-    public double[] getSize() {
-        return size;
-    }
+    public abstract double[] getSize();
 
-    public void setGrade(int newGrade) {
-        grade = newGrade;
-    }
+    public abstract void setGrade(int newGrade);
 
-    public int getGrade() {
-        return grade;
-    }
+    public abstract int getGrade();
 
-    public void setTop(boolean newTop) {
-        sealedTop = newTop;
-    }
+    public abstract void setTop(boolean newTop);
 
-    public boolean getTop() {
-        return sealedTop;
-    }
+    public abstract boolean getTop();
+
+    public abstract double getPrice();
 }
